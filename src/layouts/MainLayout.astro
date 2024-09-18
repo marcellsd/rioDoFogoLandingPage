@@ -1,6 +1,7 @@
 ---
 import MainHead from "./MainHead.astro"
 import Footer from "../components/Footer.astro"
+import NavBar from "../components/NavBar.astro"
 
 const {
 	title = 'Rio do Fogo',
@@ -20,8 +21,9 @@ const {
 	</style>
 	<body class="max-w-screen-2xl justify-center m-auto text-white font-titulo ">
 		<div class="bg-[url('/fundo.png')] bg-cover flex flex-col items-center justify-center">
+		<NavBar  />
 		<slot />
 		<Footer {cel} {cep} {endereco}/>
-		</div>
+	</div>
 	</body>
 </html>

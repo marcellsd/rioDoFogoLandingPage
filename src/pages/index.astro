@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <MainLayout title="Rio do Fogo">
@@ -26,11 +27,11 @@ import MainLayout from "../layouts/MainLayout.astro";
         <rect width="2" height="200" x="400" y="2" fill="url(#grad1)"></rect>
       </svg>
     </div>
-    <div class="text-4xl w-[50%] items-end flex rtl leading-30 m-7">
+    <div class="text-4xl w-[50%] items-end flex rtl leading-30 m-7 md:text-6xl">
       <h1>BEM VINDO AO RIO DO FOGO</h1>
     </div>
   </section>
-  <section    class="text-4xl w-screen max-w-screen-2xl relative h-80 flex items-start justify-start p-8 bg-gradient-to-r from-preto-escuro to-transparent"
+  <section    class="text-4xl w-screen max-w-screen-2xl relative h-80 flex items-start justify-start p-8 bg-gradient-to-r from-preto-escuro to-transparent md:text-6xl"
   >
     <h1 class="mt-5">NOSSA NATUREZA É BELA</h1>
     <div class="absolute left-0 top-0 flex items-start justify-start pr-4">
@@ -53,7 +54,8 @@ import MainLayout from "../layouts/MainLayout.astro";
       </svg>
     </div>
 	<div>
-		
+
 	</div>
 </section>
+ 
 </MainLayout>

@@ -1,0 +1,27 @@
+---
+import MainHead from "./MainHead.astro"
+import Footer from "../components/Footer.astro"
+
+const {
+	title = 'Rio do Fogo',
+	description = 'Landing Page do Rio do Fogo',
+	cel = '(+55 84) 98778-8888',
+	cep = '0000-000',
+	endereco = 'Rio Catolé, Rio do fogo'
+} = Astro.props
+
+---
+
+<!doctype html>
+<html lang="en">
+	<MainHead {title} {description} />
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+	</style>
+	<body class="max-w-screen-2xl justify-center m-auto text-white font-titulo ">
+		<div class="bg-[url('/fundo.png')] bg-cover flex flex-col items-center justify-center">
+		<slot />
+		<Footer {cel} {cep} {endereco}/>
+		</div>
+	</body>
+</html>

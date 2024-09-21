@@ -18,14 +18,16 @@ const {
 <html lang="en">
 	<MainHead {title} {description} />
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 	</style>
-	<body class="max-w-screen-2xl justify-center m-auto text-white font-titulo ">
-		<div class="bg-[url('/fundo.png')] bg-cover flex flex-col items-center justify-center">
-			<NavBar  />
-			<slot />
+	<body class="max-w-screen-2xl justify-center m-auto text-white font-titulo bg-[url('/fundo.png')] bg-cover bg-no-repeat bg-center w-screen">
+		<div class="flex flex-col w-[100%] items-center justify-center bg-gradient-to-b from-preto-escuro to-transparent ">
+	
+				<NavBar  />
+				<slot/>
+	
 		</div>
-		<Slider />
+		<Slider  />
 		<Footer {cel} {cep} {endereco}/>
 	</body>
 </html>

@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily:{
         titulo: ['Julius Sans One'],
-        custom: ['Sofadi One']
+        custom: ["Poppins"]
       },
       colors:{
         preto: {

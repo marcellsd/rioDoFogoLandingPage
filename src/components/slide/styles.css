@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --swiper-theme-color: #FF9E02;
+}
+
+.swiper-pagination-bullet {
+  outline: 1px solid var(--swiper-theme-color);
+  opacity: 100%;
+  background-color: white;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--swiper-theme-color);
+}
+
+.swiper{
+    background:none;
+}
+
+.swiper-wrapper{
+    height: 250px;
+    z-index: 1;
+}
+
+/* ====================================================== */
+/*            MEDIA QUERIES (LARGE DEVICES)               */
+@media screen and (min-width: 768px) {
+  .swiper-pagination-bullet {
+    visibility: hidden;
+  }
+}

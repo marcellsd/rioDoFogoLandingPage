@@ -1,0 +1,77 @@
+---
+import type { GetStaticPaths } from "astro";
+import MainLayout from '../../layouts/MainLayout.astro'
+import { Icon } from 'astro-icon/components';
+
+export const getStaticPaths = (({paginate}) => {
+    
+    const galeria = ['/img1.png', '/img2.jpg', '/img3.jpg', '/img4.jpg', '/img5.jpg', '/img6.png','/img7.png','/img8.png'];
+    return paginate(galeria, {pageSize:1});
+
+}) satisfies GetStaticPaths;
+
+const {page} = Astro.props;
+
+console.log(page);
+const [data] = page.data
+
+console.log(page.url)
+
+console.log(data);
+
+
+---
+
+<MainLayout>
+<section class="bg-black bg-opacity-70 ">
+    <div class="galeria_container">
+        {
+            page.url.prev && (
+                <a  href={page.url.prev}><Icon name="tabler:circle-arrow-left-filled" class=" text-4xl  text-yellow-50/60 backdrop-blur-md dark:text-neutral-700/40  dark:backdrop-blur-md" /></a> //
+            )
+        }
+
+        <img src={data}   
+        alt='floresta'
+        class="forest_img"
+        />
+
+        {
+            page.url.next && (
+            <a href={page.url.next}><Icon name="tabler:circle-arrow-right-filled" class=" text-4xl  text-yellow-50/60 backdrop-blur-md dark:text-neutral-700/40  dark:backdrop-blur-md"/></a>
+            )
+        }
+     </div>
+</section>
+</MainLayout>
+
+<style>
+.galeria_container{
+    width: 100vw;
+    height: 90vh;
+    max-width: 1536px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.forest_img{
+    max-width: 600px;
+    max-height: 450px;
+}
+
+@media (max-width: 768px) {
+    .galeria_container {
+        flex-direction: column; /* Em telas menores, as imagens ficarão em uma coluna */
+    }
+
+    .forest_img {
+        max-width: 100%; /* Em telas pequenas, a imagem ocupa a largura total do contêiner */
+        max-height: auto; /* Altura ajustável */
+    }
+}
+
+
+</style>

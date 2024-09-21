@@ -11,12 +11,18 @@
     "build:css": "npx tailwindcss -i ./src/styles/styles.css -o ./src/dist/output.css"
   },
   "dependencies": {
+    "@astrojs/preact": "^3.5.3",
+    "@astrojs/react": "^3.6.2",
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/bxs": "^1.2.0",
     "@iconify-json/tabler": "^1.2.3",
     "@iconify-json/teenyicons": "^1.2.0",
     "astro": "^4.15.4",
-    "astro-icon": "^1.1.1"
+    "astro-icon": "^1.1.1",
+    "preact": "^10.24.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "swiper": "^9.0.3"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.10"

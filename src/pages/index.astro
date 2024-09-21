@@ -1,10 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Icon } from "astro-icon/components";
+import Carousel from "../components/Carousel.astro";
+import Slider from "../components/slide/Slider.astro";
+
 ---
 
 <MainLayout title="Rio do Fogo">
-  <h1 class="">Nhaiiim</h1>
   <section
     class="h-80 w-screen max-w-screen-2xl flex items-center justify-end p-8 bg-gradient-to-l from-preto-escuro to-transparent relative"
   >
@@ -31,9 +33,10 @@ import { Icon } from "astro-icon/components";
       <h1>BEM VINDO AO RIO DO FOGO</h1>
     </div>
   </section>
-  <section    class="text-4xl w-screen max-w-screen-2xl relative h-80 flex items-start justify-start p-8 bg-gradient-to-r from-preto-escuro to-transparent md:text-6xl"
+  <section    class="text-4xl w-screen max-w-screen-2xl relative   p-8 bg-gradient-to-b from-black via-preto-escuro t to-transparent md:text-6xl"
   >
-    <h1 class="mt-5">NOSSA NATUREZA É BELA</h1>
+  <div class="flex items-start justify-start">
+    <h1 class="my-5">NOSSA NATUREZA É BELA</h1>
     <div class="absolute left-0 top-0 flex items-start justify-start pr-4">
       <svg
         viewBox="0 60 402 202"
@@ -53,9 +56,14 @@ import { Icon } from "astro-icon/components";
         <rect width="2" height="200" x="400" y="2" fill="url(#grad1)"></rect>
       </svg>
     </div>
-	<div>
+  </div>
 
-	</div>
+  <!-- <Carousel /> -->
+
 </section>
- 
+
+
+  
 </MainLayout>
+
+

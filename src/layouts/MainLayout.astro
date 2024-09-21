@@ -4,19 +4,25 @@ import Footer from "../components/Footer.astro"
 import NavBar from "../components/NavBar.astro"
 import Slider from "../components/slide/Slider.astro"
 
+interface Props {
+  esconder: string
+}
+
 const {
 	title = 'Rio do Fogo',
 	description = 'Landing Page do Rio do Fogo',
 	cel = '(+55 84) 98778-8888',
 	cep = '0000-000',
-	endereco = 'Rio Catolé, Rio do fogo'
+	endereco = 'Rio Catolé, Rio do fogo',
+	esconder
 } = Astro.props
+
 
 ---
 
 <!doctype html>
 <html lang="en">
-	<MainHead {title} {description} />
+	<MainHead {title} {description}  />
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 	</style>
@@ -26,8 +32,10 @@ const {
 				<NavBar  />
 				<slot/>
 	
+			</div>
+		<div class=`${esconder} md:block`>
+			<Slider  />
 		</div>
-		<Slider  />
 		<Footer {cel} {cep} {endereco}/>
 	</body>
 </html>

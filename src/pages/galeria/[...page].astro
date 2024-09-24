@@ -62,12 +62,15 @@ console.log(data);
 
         if(bulletId == 1){
             bullet.classList.add('bg-slate-400');
+            bullet.classList.remove('bg-slate-600');
         }
         if(bulletId == page.currentPage){
             bullet.classList.add('bg-slate-400');
+            bullet.classList.remove('bg-slate-600');
         }
         else{
             bullet.classList.remove('bg-slate-400');
+            bullet.classList.add('bg-slate-600');
         }
 
         console.log(bullet)

@@ -1,8 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Icon } from "astro-icon/components";
-import Carousel from "../components/Carousel.astro";
 import Slider from "../components/slide/Slider.astro";
+import SliderSwiper from "../components/slide/SliderSwiper";
+import Vetor from "../components/vetores/Vetor.astro";
 
 ---
 
@@ -11,58 +12,22 @@ import Slider from "../components/slide/Slider.astro";
     class="h-80 w-screen max-w-screen-2xl flex items-center justify-end p-8  relative"
   >
     <div class="absolute right-0 top-12 bottom-10 flex items-center pr-4">
-      <svg
-        viewBox="0 0 402 202"
-        width="100%"
-        height="100%"
-        transform="translate(-8, 0)"
-      >
-        <defs>
-          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <!-- De verde para amarelo -->
-            <stop offset="0%" style="stop-color:#B2C582;stop-opacity:1"></stop>
-            <stop offset="100%" style="stop-color:#FF9E02;stop-opacity:1"></stop>
-          </linearGradient>
-        </defs>
-
-        <rect width="400" height="2" x="0" y="200" fill="url(#grad1)"></rect>
-        <rect width="2" height="200" x="400" y="2" fill="url(#grad1)"></rect>
-      </svg>
+      <Vetor viewBox="0 0 402 202" transform="translate(-8, 0)"  />
     </div>
     <div class="text-4xl w-[50%] items-end flex rtl leading-30 m-7 md:text-6xl">
-      <h1>BEM VINDO AO RIO DO FOGO</h1>
+      <h1>BEM VINDO À FAZENDA RIO DO FOGO</h1>
     </div>
   </section>
-  <section    class="text-4xl w-screen max-w-screen-2xl relative px-8 bg-gradient-to-t from-black to-transparent  md:text-6xl"
+  <section class="text-4xl w-screen max-w-screen-2xl relative px-8 bg-gradient-to-t from-black to-transparent  md:text-6xl"
   >
   <div class="flex items-start justify-start">
     <div class="absolute left-0 top-0 flex items-start justify-start pr-4">
-      <svg
-      viewBox="0 60 402 202"
-      width="100%"
-      height="100%"
-      transform="scale(-1, -1) translate(-20, 0)"
-      >
-      <defs>
-        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-          <!-- De verde para amarelo -->
-          <stop offset="0%" style="stop-color:#B2C582;stop-opacity:1"></stop>
-          <stop offset="100%" style="stop-color:#FF9E02;stop-opacity:1"></stop>
-        </linearGradient>
-      </defs>
-      
-      <rect width="400" height="2" x="0" y="200" fill="url(#grad1)"></rect>
-      <rect width="2" height="200" x="400" y="2" fill="url(#grad1)"></rect>
-    </svg>
+      <Vetor viewBox="0 60 402 202" transform="scale(-1, -1) translate(-20, 0)" />
   </div>
 </div>
 <h1 class="mt-5 pt-10">NOSSA NATUREZA É BELA</h1>
 
-  <!-- <Carousel /> -->
-
 </section>
-
-
   
 </MainLayout>
 

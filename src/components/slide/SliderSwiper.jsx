@@ -5,7 +5,6 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/css'
 import './styles.css'
 
-
 const SliderSwiper = () => {
     return (
       <Swiper
@@ -34,10 +33,7 @@ const SliderSwiper = () => {
         <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/4"><img src='/img4.jpg' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
         <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/5"><img src='/img5.jpg' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
         <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/6"><img src='/img1.png' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
-        <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/7"><img src='/img1.png' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
-
-
-    
+        <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/7"><img src='/img1.png' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>  
       </Swiper>
     );
   };

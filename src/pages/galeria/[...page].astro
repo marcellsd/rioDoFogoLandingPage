@@ -26,7 +26,7 @@ console.log(data);
 
 <MainLayout esconder="hidden" >
 <section class="bg-black bg-opacity-70 ">
-    <div class="galeria_container ">
+    <div class="galeria_container">
         {
             page.url.prev && (
                 <a href={page.url.prev} class="absolute right-[50%] z-10 h-[80%] w-[50%] flex flex-col justify-center items-start md:static md:w-auto "><Icon name="tabler:circle-arrow-left-filled" class="invisible md:visible text-4xl  text-yellow-50/60 backdrop-blur-md " /></a> //
@@ -37,7 +37,7 @@ console.log(data);
                 alt='floresta'
                 class="forest_img"
                 />
-                <a href="/" class=" top-[-45px] right-[8px] z-20 md:top-4 md:right-16 absolute "><Icon name="tabler:circle-x-filled" class="text-4xl text-yellow-50/60" /> </a>
+                <a href="/" class=" top-[45px] right-[8px] z-20 md:top-4 md:right-16 absolute "><Icon name="tabler:circle-x-filled" class="text-4xl text-yellow-50/60" /> </a>
             </div>
             
             {
@@ -56,8 +56,8 @@ console.log(data);
                 ))}
             </div>
         </div>
+        <!-- <Slider  /> -->
     </section>
-    <!-- <Slider /> -->
 </MainLayout>
 
 

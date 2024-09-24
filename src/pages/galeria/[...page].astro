@@ -32,12 +32,12 @@ console.log(data);
                 <a href={page.url.prev} class="absolute right-[50%] z-10 h-[80%] w-[50%] flex flex-col justify-center items-start md:static md:w-auto "><Icon name="tabler:circle-arrow-left-filled" class="invisible md:visible text-4xl  text-yellow-50/60 backdrop-blur-md " /></a> //
                 )
             }
-                <div class="relative">
+                <div class="">
                 <img  src={data}   
                 alt='floresta'
                 class="forest_img"
                 />
-                <a href="/" class=" top-[-45px] right-[8px] z-20 md:top-[-20px] md:right-[-30px] absolute "><Icon name="tabler:circle-x-filled" class="text-4xl text-yellow-50/60" /> </a>
+                <a href="/" class=" top-[-45px] right-[8px] z-20 md:top-4 md:right-16 absolute "><Icon name="tabler:circle-x-filled" class="text-4xl text-yellow-50/60" /> </a>
             </div>
             
             {
@@ -55,10 +55,9 @@ console.log(data);
                     </a>
                 ))}
             </div>
-    </div>
-</section>
-    
-
+        </div>
+    </section>
+    <!-- <Slider /> -->
 </MainLayout>
 
 
@@ -98,13 +97,13 @@ console.log(data);
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 5%;
+
     position: relative;
 }
 
 
 .forest_img{
-    max-width: 600px;
+    max-width: 100wh;
     max-height: 350px;
 }
 

@@ -1,4 +1,11 @@
-<div class="self-center flex flex-col items-center justify-center p-4 ">
+---
+
+
+const {esconder} = Astro.props
+---
+
+
+<div class=`self-center flex flex-col items-center justify-center p-4 ${esconder} `>
     <h1 class="text-4xl py-4 md:text-6xl">Localização</h1>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7944.441696961961!2d-35.490713973841665!3d-5.383267536844948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b3936474efb605%3A0xf8c5f6ea7dcbf616!2sFazenda%20Rio%20do%20Fogo!5e0!3m2!1spt-BR!2sbr!4v1727199655474!5m2!1spt-BR!2sbr"   style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class=" min-h-[300px] w-[80%] md:h-[450px]"></iframe>
 </div>

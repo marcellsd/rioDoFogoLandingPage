@@ -28,7 +28,7 @@ const SliderSwiper = () => {
             },
         }}
       >
-        <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/"><img src='/img1.png' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
+        <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/"><img src='/img1.png' class={` h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300 `}/></a></SwiperSlide>
         <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/2"><img src='/img2.jpg' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
         <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/3"><img src='/img3.jpg' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
         <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/4"><img src='/img4.jpg' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>

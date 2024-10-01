@@ -5,8 +5,8 @@ import Vetor from "../components/vetores/Vetor.astro";
 ---
 
 <MainLayout title="Rio do Fogo">
-  <div class="w-screen object-fill -z-10 absolute overflow-hidden">
-    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+  <div class="w-screen object-fill -z-10 absolute overflow-hidden flex items-center justify-center">
+    <video autoplay loop muted playsinline class="w-full h-full object-cover max-w-screen-2xl" transition:persist>
       <source src="video1.mp4" type="video/mp4">
       Seu navegador não suporta a tag de vídeo.
     </video>

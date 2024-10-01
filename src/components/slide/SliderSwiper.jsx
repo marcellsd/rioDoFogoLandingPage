@@ -53,28 +53,28 @@ const SliderSwiper = ({breakPoints}) => {
         className="mySwiper2"
       >
         <SwiperSlide>
-          <a href="/galeria/"><img src="/img1.jpg" /></a>
+          <a href="/galeria/"><img src="/img1.jpg" className="hover:scale-105 transition-transform"/></a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/galeria/2"><img src="/img2.jpg" /></a>
+          <a href="/galeria/2"><img src="/img2.jpg" className="hover:scale-105 transition-transform"  /></a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/galeria/3"><img src="/img3.jpg" /></a>
+          <a href="/galeria/3"><img src="/img3.jpg" className="hover:scale-105 transition-transform" /></a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/galeria/4"><img src="/img4.jpg" /></a>
+          <a href="/galeria/4"><img src="/img4.jpg" className="hover:scale-105 transition-transform" /></a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/galeria/5"><img src="/img5.jpg" /></a>
+          <a href="/galeria/5"><img src="/img5.jpg" className="hover:scale-105 transition-transform" /></a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/galeria/6"><img src="/img6.jpg" /></a>
+          <a href="/galeria/6"><img src="/img6.jpg" className="hover:scale-105 transition-transform" /></a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/galeria/7"><img src="/img7.jpg" /></a>
+          <a href="/galeria/7"><img src="/img7.jpg" className="hover:scale-105 transition-transform" /></a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="/galeria/8"><img src="/img8.png" /></a>
+          <a href="/galeria/8"><img src="/img8.png" className="hover:scale-105 transition-transform" /></a>
         </SwiperSlide>
       </Swiper>
     </>

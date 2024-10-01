@@ -7,7 +7,7 @@ import Slider from "../../components/slide/Slider.astro";
 
 export const getStaticPaths = (({paginate}) => {
     
-    const galeria = ['/img1.png', '/img2.jpg', '/img3.jpg', '/img4.jpg', '/img5.jpg', '/img6.png','/img7.png','/img8.png'];
+    const galeria = ['/img1.jpg', '/img2.jpg', '/img3.jpg', '/img4.jpg', '/img5.jpg', '/img6.jpg','/img7.jpg','/img8.png'];
     return paginate(galeria, {pageSize:1});
 
 }) satisfies GetStaticPaths;
@@ -24,12 +24,12 @@ console.log(data);
 
 ---
 
-<MainLayout esconder="hidden" >
-<section class="bg-black bg-opacity-70 ">
+<MainLayout esconder="hidden" fullView='md:h-screen'>
+<section class="bg-black bg-opacity-70">
     <div class="galeria_container">
         {
             page.url.prev && (
-                <a href={page.url.prev} class="absolute right-[50%] z-10 h-[80%] w-[50%] flex flex-col justify-center items-start md:static md:w-auto "><Icon name="tabler:circle-arrow-left-filled" class="invisible md:visible text-4xl  text-yellow-50/60 backdrop-blur-md " /></a> //
+                <a href={page.url.prev} class="absolute right-[50%] z-10 h-[80%] w-[50%] flex flex-col justify-center items-start md:static md:w-auto "><Icon name="tabler:circle-arrow-left-filled" class="invisible md:visible text-4xl  text-yellow-50/60 backdrop-blur-md " /></a> 
                 )
             }
                 <div class="">
@@ -37,7 +37,7 @@ console.log(data);
                 alt='floresta'
                 class="forest_img"
                 />
-                <a href="/" class=" top-[45px] right-[8px] z-20 md:top-4 md:right-16 absolute "><Icon name="tabler:circle-x-filled" class="text-4xl text-yellow-50/60" /> </a>
+                <a href="/" class=" top-[45px] right-[8px] z-20 md:-top-14 md:right-16 absolute "><Icon name="tabler:circle-x-filled" class="text-4xl text-yellow-50/60" /> </a>
             </div>
             
             {
@@ -56,8 +56,8 @@ console.log(data);
                 ))}
             </div>
         </div>
-        <!-- <Slider  /> -->
     </section>
+    <!-- <Slider  /> -->
 </MainLayout>
 
 
@@ -103,8 +103,10 @@ console.log(data);
 
 
 .forest_img{
-    max-width: 100wh;
-    max-height: 350px;
+    /* max-width: 100wh; */
+    /* max-height: 350px; */
+    height: 100vh;
+ 
 }
 
 @media (max-width: 768px) {
@@ -115,8 +117,8 @@ console.log(data);
     }
 
     .forest_img {
-        max-width: 100%; /* Em telas pequenas, a imagem ocupa a largura total do contêiner */
-        max-height: auto; /* Altura ajustável */
+        width: auto; /* Em telas pequenas, a imagem ocupa a largura total do contêiner */
+        height: 100%;   /* Altura ajustável */
     }
 }
 

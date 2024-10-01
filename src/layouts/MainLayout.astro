@@ -6,7 +6,12 @@ import Slider from "../components/slide/Slider.astro"
 import Map from "../components/Map.astro"
 
 interface Props {
-  esconder: string
+  esconder: string,
+  title?: string,
+  description?: string,
+  cel?: string,
+  cep?: string,
+  endereco?: string,
 }
 
 const {
@@ -16,6 +21,7 @@ const {
 	cep = '0000-000',
 	endereco = 'Rio Catolé, Rio do fogo',
 	esconder ='',
+	fullView = '',
 } = Astro.props
 
 
@@ -28,20 +34,18 @@ const {
 		@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 	</style>
 	<body class=" m-auto text-white font-titulo flex self-center flex-col items-center justify-center bg-black">
-		<div class="bg-[url('/fundo.png')] bg-cover bg-no-repeat bg-center w-screen max-w-screen-2xl">
+		<div class=" bg-cover bg-no-repeat bg-center w-screen max-w-screen-2xl">
 			
 			<NavBar esconder={esconder} />
 			
-			<div class="flex flex-col w-[100%] items-center justify-center bg-gradient-to-b from-preto-escuro to-transparent ">
-		
-				<slot/>
-				
+			<div class=`flex flex-col w-[100%] items-center justify-center b  ${fullView}`>
+				<slot/>			
 			</div>
 			<div class=`${esconder} `>
-				<Slider  />
+				<Slider breakPoints={true} />
 			</div>
 			<Map {esconder} />
-			<Footer {cel} {cep} {endereco}/>
+			<Footer {cel} {cep} {endereco} {esconder}/>
 		</div>
 	</body>
 </html>

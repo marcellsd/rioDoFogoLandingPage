@@ -1,41 +1,84 @@
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/swiper-bundle.min.css'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import 'swiper/css'
-import './styles.css'
+import { useState } from "react";
+import "swiper/swiper-bundle.min.css";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css";
+import "./styles.css";
 
-const SliderSwiper = () => {
-    return (
+import SwiperCore, { Thumbs } from "swiper";
+
+SwiperCore.use([Navigation, Thumbs]);
+
+const galeria = [
+  { href: "/galeria/", src: "/img1.jpg" },
+  { href: "/galeria/2", src: "/img2.jpg" },
+  { href: "/galeria/3", src: "/img3.jpg" },
+  { href: "/galeria/4", src: "/img4.jpg" },
+  { href: "/galeria/5", src: "/img5.jpg" },
+  { href: "/galeria/6", src: "/img6.jpg" },
+  { href: "/galeria/7", src: "/img7.jpg" },
+  { href: "/galeria/8", src: "/img8.png" },
+];
+
+const SliderSwiper = ({breakPoints}) => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  return (
+    <>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        navigation
-        slidesPerView={1}
-        pagination={{clickable: true}}
-        scrollbar={{draggable:true}}
-        grabCursor={true}
-        breakpoints={{
-            500:{
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-              },
-            1250:{
-                slidesPerView: 5,
-            },
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
         }}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Thumbs]}
+        spaceBetween={40}
+        navigation={true}
+        pagination={{ clickable: true }}
+        Scrollbar={{ draggable: true }}
+        slidesPerView={1}
+        // thumbs={{ swiper: thumbsSwiper }}
+        grabCursor={true}
+        breakpoints={
+         breakPoints ? {
+          500: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1250: {
+            slidesPerView: 3,
+          },
+        }: {}}
+        className="mySwiper2"
       >
-        <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/"><img src='/img1.png' class={` h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300 `}/></a></SwiperSlide>
-        <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/2"><img src='/img2.jpg' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
-        <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/3"><img src='/img3.jpg' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
-        <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/4"><img src='/img4.jpg' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
-        <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/5"><img src='/img5.jpg' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
-        <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/6"><img src='/img1.png' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>
-        <SwiperSlide class='py-5 lg:px-8'><a href="/galeria/7"><img src='/img1.png' class=' h-[85%] mt-9 shadow-2xl rounded-xl hover:scale-105 transition-transform  duration-300'/></a></SwiperSlide>  
+        <SwiperSlide>
+          <a href="/galeria/"><img src="/img1.jpg" /></a>
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="/galeria/2"><img src="/img2.jpg" /></a>
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="/galeria/3"><img src="/img3.jpg" /></a>
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="/galeria/4"><img src="/img4.jpg" /></a>
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="/galeria/5"><img src="/img5.jpg" /></a>
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="/galeria/6"><img src="/img6.jpg" /></a>
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="/galeria/7"><img src="/img7.jpg" /></a>
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="/galeria/8"><img src="/img8.png" /></a>
+        </SwiperSlide>
       </Swiper>
-    );
-  };
+    </>
+  );
+};
 
-export default SliderSwiper
+export default SliderSwiper;

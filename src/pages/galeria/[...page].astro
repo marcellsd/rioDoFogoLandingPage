@@ -1,9 +1,7 @@
 ---
 import type { GetStaticPaths } from "astro";
-import MainLayout from '../../layouts/MainLayout.astro'
 import { Icon } from 'astro-icon/components';
-import SliderSwiper from "../../components/slide/SliderSwiper";
-import Slider from "../../components/slide/Slider.astro";
+import MainHead from "../../layouts/MainHead.astro";
 
 export const getStaticPaths = (({paginate}) => {
     
@@ -13,19 +11,11 @@ export const getStaticPaths = (({paginate}) => {
 }) satisfies GetStaticPaths;
 
 const {page} = Astro.props;
-
-console.log(page);
 const [data] = page.data
 
-console.log(page.url)
-
-console.log(data);
-
-
 ---
-
-<MainLayout esconder="hidden" fullView='md:h-screen'>
-<section class="bg-black bg-opacity-70">
+<MainHead title='Galeria' description="Galeria de fotos do Rio do Fogo" />
+<section class=" md:h-screen m-auto text-white font-titulo flex self-center flex-col items-center justify-center bg-black">
     <div class="galeria_container">
         {
             page.url.prev && (
@@ -57,8 +47,6 @@ console.log(data);
             </div>
         </div>
     </section>
-    <!-- <Slider  /> -->
-</MainLayout>
 
 
 <script define:vars={{page}}>

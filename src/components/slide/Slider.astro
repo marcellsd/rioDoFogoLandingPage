@@ -1,11 +1,8 @@
 ---
 import SliderSwiper from './SliderSwiper.jsx'
-
-const { breakPoints} = Astro.props
-
 ---
 <div class="bg-gradient-to-b from-black to-transparent w-[100%] ">
 <section class="py-4  mx-10">
-    <SliderSwiper breakPoints={breakPoints} client:load />
+    <SliderSwiper client:load />
 </section>
 </div>

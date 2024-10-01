@@ -17,12 +17,9 @@
 }
 
 .swiper{
-    height:400px;
-    /* height: 100vh; */
+    height:400px; 
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 16px;
-    /* background-color: rgba(0, 0, 0); */
-   
+    padding: 16px;  
 }
 
 .swiper-slide {
@@ -32,7 +29,6 @@
 }
 
 .swiper-wrapper{
-    /* height: 250px; */
     z-index: 1;
     
 }

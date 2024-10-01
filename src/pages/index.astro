@@ -4,7 +4,7 @@ import Vetor from "../components/vetores/Vetor.astro";
 
 ---
 
-<MainLayout title="Rio do Fogo">
+<MainLayout title="Rio do Fogo" description="LandingPage do Rio do Fogo">
   <div class="w-screen object-fill -z-10 absolute overflow-hidden flex items-center justify-center">
     <video autoplay loop muted playsinline class="w-full h-full object-cover max-w-screen-2xl" transition:persist>
       <source src="video1.mp4" type="video/mp4">
@@ -15,20 +15,16 @@ import Vetor from "../components/vetores/Vetor.astro";
     class="h-80 w-screen max-w-screen-2xl flex items-center justify-end p-8  relative"
   >
     <div class="absolute right-0 top-12 bottom-10 flex items-center pr-4">
-      <Vetor viewBox="0 0 402 202" transform="translate(-8, 0)"  />
+      <!-- <Vetor viewBox="0 0 402 202" transform="translate(-8, 0)"  /> -->
     </div>
-    <div class="text-4xl w-[50%] items-end flex rtl leading-30 m-7 md:text-6xl">
+    <div class="text-4xl w-[50%] items-end flex rtl leading-30 m-7 md:text-6xl border-b-2 border-r-2 pr-4 pb-4 border-gradient border-[#B2C582]">
       <h1>BEM VINDO À FAZENDA RIO DO FOGO</h1>
     </div>
   </section>
   <section class="text-4xl w-screen max-w-screen-2xl relative px-8 bg-gradient-to-t from-black to-transparent  md:text-6xl"
   >
-  <div class="flex items-start justify-start">
-    <div class="absolute left-0 top-0 flex items-start justify-start pr-4">
-      <Vetor viewBox="0 60 402 202" transform="scale(-1, -1) translate(-20, 0)" />
-  </div>
-</div>
-<h1 class="mt-5 pt-10">NOSSA NATUREZA É BELA</h1>
+  
+<h1 class="mt-5 pt-6 border-l-2 border-t-2  pl-4  border-gradient border-[#B2C582]">NOSSA NATUREZA É BELA</h1>
 
 </section>
   

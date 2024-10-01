@@ -8,10 +8,10 @@ interface Props {
   endereco: string;
 }
 
-const { cel, cep, endereco, esconder } = Astro.props;
+const { cel, cep, endereco } = Astro.props;
 ---
 
-<footer class=`bg-preto-escuro text-white w-[100%] p-4 ${esconder} min-h-[150px] flex items-center justify-center`>
+<footer class=`bg-preto-escuro text-white w-[100%] p-4 min-h-[150px] flex items-center justify-center`>
   <small class="flex flex-col gap-1 items-center justify-center h-[100% ] pt-2">
     <p>{endereco}, Cep {cep}</p>
     <p>Contato: {cel}</p>

@@ -6,6 +6,11 @@
   --swiper-theme-color: #FF9E02;
 }
 
+.swiper-button-prev, .swiper-button-next {
+  opacity:0;
+  display:none;
+}
+
 .swiper-pagination-bullet {
   outline: 1px solid var(--swiper-theme-color);
   opacity: 100%;

@@ -30,24 +30,24 @@ const {
     @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
   </style>
   <body
-    class="m-auto text-white font-titulo flex self-center flex-col items-center justify-center bg-black"
+    class="m-auto text-amareloClaro font-titulo flex self-center flex-col items-center justify-center bg-black"
   >
     <div class="bg-cover bg-no-repeat bg-center w-screen max-w-screen-2xl ">
       <div class="sticky inset-x-0 top-4 z-50 flex  items-center justify-between mx-8">
         <NavBar  />
         <img src="/transparent_image.png" class="h-16  rounded-md bg-yellow-50/60 border border-yellow-100/40" />
-
       </div>
       <div
         class=`flex flex-col w-[100%] items-center justify-center b`
       >
         <slot />
       </div>
+      <a href=`https://api.whatsapp.com/send?phone=5584987788888&text=Entre%20em%20contato!` target="_blank" class="z-50 fixed right-10 bottom-10 opacity-60 "><img src="/whatsapp_icon.svg" class=" h-10"/></a>
       <div >
         <Slider />
       </div>
       <Map />
-      <Footer {cel} {cep} {endereco}  />
+      <Footer {cel} {cep} {endereco} />
     </div>
   </body>
 </html>

@@ -11,6 +11,7 @@ export default {
         preto: {
           escuro: '#1B2727',
         },
+        amareloClaro:'#fefce8',
         amarelo: '#FF9E02'
       },
       screens: {

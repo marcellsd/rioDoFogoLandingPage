@@ -7,14 +7,14 @@ import "./styles.css";
 
 
 const galeria = [
-  { href: "/galeria/", src: "/img1.jpg" },
-  { href: "/galeria/2", src: "/img2.jpg" },
-  { href: "/galeria/3", src: "/img3.jpg" },
-  { href: "/galeria/4", src: "/img4.jpg" },
-  { href: "/galeria/5", src: "/img5.jpg" },
-  { href: "/galeria/6", src: "/img6.jpg" },
-  { href: "/galeria/7", src: "/img7.jpg" },
-  { href: "/galeria/8", src: "/img8.png" },
+  {id:1, href: "/galeria/", src: "/img1.jpg" },
+  {id:2, href: "/galeria/2", src: "/img2.jpg" },
+  {id:3, href: "/galeria/3", src: "/img3.jpg" },
+  {id:4, href: "/galeria/4", src: "/img4.jpg" },
+  {id:5, href: "/galeria/5", src: "/img5.jpg" },
+  {id:6, href: "/galeria/6", src: "/img6.jpg" },
+  {id:7, href: "/galeria/7", src: "/img7.jpg" },
+  {id:8, href: "/galeria/8", src: "/img8.png" },
 ];
 
 const SliderSwiper = () => {
@@ -30,7 +30,7 @@ const SliderSwiper = () => {
         spaceBetween={40}
         navigation={true}
         pagination={{ clickable: true }}
-        Scrollbar={{ draggable: true }}
+        scrollbar={{ draggable: true }}
         slidesPerView={1}
         grabCursor={true}
         breakpoints={{
@@ -47,7 +47,7 @@ const SliderSwiper = () => {
         className="mySwiper2"
       >
         {galeria.map((imagem) =>(
-           <SwiperSlide>
+           <SwiperSlide key={imagem.id} >
            <a href={imagem.href}><img src={imagem.src} className="hover:scale-105 transition-transform"/></a>
          </SwiperSlide>
         ))}

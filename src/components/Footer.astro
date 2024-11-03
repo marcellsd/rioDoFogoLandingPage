@@ -11,11 +11,11 @@ interface Props {
 const { cel, cep, endereco } = Astro.props;
 ---
 
-<footer class=`bg-preto-escuro text-white w-[100%] p-4 min-h-[150px] flex items-center justify-center`>
+<footer class=`bg-preto-escuro text-white w-[100%] p-4 min-h-[150px] flex items-center justify-center max-w-[100%]`>
   <small class="flex flex-col gap-1 items-center justify-center h-[100% ] pt-2">
-    <a href="https://www.instagram.com/riocatole/?igsh=bnBvbDZrb2drMnl0" target="_blank" class="flex text-lg gap-2 items-center hover:opacity-50 transition-opacity duration-500"><Icon name='teenyicons:instagram-solid' />riocatole</a>
+    <a href="https://www.instagram.com/riocatole/?igsh=bnBvbDZrb2drMnl0" target="_blank" class="flex text-lg gap-2 items-center hover:opacity-50 transition-opacity duration-500"><Icon name='teenyicons:instagram-solid' class="text-amareloClaro" />riocatole</a>
+    <a href="https://api.whatsapp.com/send?phone=5584987788888&text=Entre%20em%20contato!" target="_blank" class="flex gap-2 justify-center items-center hover:opacity-50 transition-opacity duration-500"><img src="/whatsapp_icon.svg" class="h-6"/>{cel}</a>
     <p>{endereco}</p>
     <p> Cep {cep}</p>
-    <p>Contato: {cel}</p>
   </small>
 </footer>

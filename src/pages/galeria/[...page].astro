@@ -5,7 +5,7 @@ import MainHead from "../../layouts/MainHead.astro";
 
 export const getStaticPaths = (({paginate}) => {
     
-    const galeria = ["/img10.jpg", "/img2.jpg", "/img3.jpg", "/img5.jpg", "/img7.jpg", "/img1.jpg", "/img4.jpg", "/img6.jpg", "/img8.png", "/img9.jpg"];
+    const galeria = ["/img10.jpg","/img2.jpg","/img3.jpg","/img5.jpg","/img7.jpg","/img1.jpg","/img4.jpg","/img6.jpg","/img8.jpg","/img9.jpg"];
     return paginate(galeria, {pageSize:1});
 
 }) satisfies GetStaticPaths;
@@ -72,6 +72,15 @@ const [data] = page.data
         }
 
         console.log(bullet)
+    });
+
+    // Isso garante que ao montar a página, o vídeo reinicia
+    document.addEventListener('astro:page-load', () => {
+        const video = document.getElementById('galeria-video');
+        if (video) {
+            video.currentTime = 0;
+            video.load();
+        }
     });
 
 </script>

@@ -5,7 +5,7 @@ import MainHead from "../../layouts/MainHead.astro";
 
 export const getStaticPaths = (({paginate}) => {
     
-    const galeria = ['/img1.jpg', '/img2.jpg', '/img3.jpg', '/img4.jpg', '/img5.jpg', '/img6.jpg','/img7.jpg','/img8.png'];
+    const galeria = ["/img10.jpg", "/img2.jpg", "/img3.jpg", "/img5.jpg", "/img7.jpg", "/img1.jpg", "/img4.jpg", "/img6.jpg", "/img8.png", "/img9.jpg"];
     return paginate(galeria, {pageSize:1});
 
 }) satisfies GetStaticPaths;

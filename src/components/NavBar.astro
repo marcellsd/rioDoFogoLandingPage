@@ -2,14 +2,22 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<nav class=`w-[100px] flex-wrap text-sm md:flex-nowrap md:justify-center` >
-    <div class="relative mx-5 w-full rounded-[36px] border border-yellow-100/40 bg-yellow-50/60 py-1 backdrop-blur-md flex items-center md:px-5 lg:px-8 xl:mx-auto ">
-        <a href="/" class="text-4xl hidden ">
-        <Icon name="tabler:menu-2" />
+<nav class="w-full flex-wrap text-sm md:flex-nowrap md:justify-center">
+    <div class="relative mx-5 w-full py-1 flex items-center md:px-5 lg:px-8 xl:mx-auto">
+        <a href="/" class="text-4xl hidden">
+            <Icon name="tabler:menu-2" />
         </a>
-        <ul class="flex gap-6 text-preto-escuro font-custom font-semibold w-[100%] items-center justify-center">
+        <ul class="flex gap-4 text-preto-escuro font-custom font-semibold w-full items-center justify-start">
             <!-- <li class="hover:cursor-pointer hover:opacity-70 transition-opacity duration-300 delay-75"><a href="/">HOME</a></li> -->
-            <li class="hover:cursor-pointer hover:opacity-70 transition-opacity duration-300 delay-75"><a href="/galeria">GALERIA</a></li>
+            <!-- <li class="bg-yellow-50/60 border border-yellow-100/40 rounded-[36px] px-4 py-1 flex items-center">
+                <a href="/galeria" class="hover:cursor-pointer hover:opacity-70 transition-opacity duration-300 delay-75">GALERIA</a>
+            </li> -->
+            <li class="bg-yellow-50/60 border border-yellow-100/40 rounded-[36px] px-4 py-1 flex items-center">
+                <a href="https://api.whatsapp.com/send?phone=5584987788888&text=Entre%20em%20contato!" target="_blank" class="flex items-center gap-2 hover:cursor-pointer hover:opacity-70 transition-opacity duration-300 delay-75">
+                    RESERVE AQUI
+                    <img src="/whatsapp-fill.svg" class="h-6 w-6" alt="WhatsApp" style="filter: brightness(0);" />
+                </a>
+            </li>
         </ul>
     </div>
 </nav> 

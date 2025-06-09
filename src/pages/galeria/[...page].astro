@@ -17,37 +17,35 @@ const [data] = page.data
 <MainHead title='Galeria' description="Galeria de fotos do Rio do Fogo" />
 <section class=" md:h-screen m-auto text-white font-titulo flex self-center flex-col items-center justify-center bg-black">
     <div class="galeria_container">
-        {
-            page.url.prev && (
-                <a href={page.url.prev} class="absolute right-[50%] z-10 h-[80%] w-[50%] flex flex-col justify-center items-start md:static md:w-auto "><Icon name="tabler:circle-arrow-left-filled" class="invisible md:visible text-4xl  text-yellow-50/60 backdrop-blur-md " /></a> 
-                )
-            }
-            <div class="flex flex-col items-end relative">
-                <a href="/" class="absolute -top-10 right-4 z-20 md:top-0 md:-right-9 "><Icon name="tabler:circle-x-filled" class="text-4xl text-yellow-50/60" /> </a>
+        {page.url.prev && (
+            <a href={page.url.prev} class="seta-galeria seta-esquerda">
+                <Icon name="tabler:circle-arrow-left-filled" class="text-4xl text-yellow-50/60 backdrop-blur-md" />
+            </a>
+        )}
+        <div class="flex flex-col items-end relative">
+            <a href="/" class="fechar-galeria" onclick="window.location=this.href; return false;"><Icon name="tabler:circle-x-filled" class="text-4xl text-yellow-50/60" /> </a>
+            <div class="imagem-wrapper">
                 <img  src={data}   
                 alt='floresta'
                 class="forest_img"
                 />
             </div>
-
-                {
-                    page.url.next && (
-                        <a href={page.url.next} class="absolute left-[50%] z-10 h-[80%] w-[50%] flex flex-col justify-center items-end md:static md:w-auto md:h-[100vh] md:mb-[36px]"><Icon name="tabler:circle-arrow-right-filled" class=" invisible md:visible text-4xl  text-yellow-50/60 backdrop-blur-md"/></a>
-                        )
-                    }
-  
-            
-            <div id="bullets" class="flex gap-2 py-2 z-30 md:hidden">
-                {Array.from({ length: page.lastPage }, (_, index) => (
-                    <a href={
-                        index == 0 ? page.url.first : '/galeria/' + (index + 1)
-                    } id={`bullet_${index}`} class="p-2 bg-slate-600 rounded-full hover:outline outline-slate-400">
-                        
-                    </a>
-                ))}
-            </div>
         </div>
-    </section>
+        {page.url.next && (
+            <a href={page.url.next} class="seta-galeria seta-direita">
+                <Icon name="tabler:circle-arrow-right-filled" class="text-4xl text-yellow-50/60 backdrop-blur-md"/>
+            </a>
+        )}
+        <div id="bullets" class="flex gap-2 py-2 z-30 md:hidden">
+            {Array.from({ length: page.lastPage }, (_, index) => (
+                <a href={
+                    index == 0 ? page.url.first : '/galeria/' + (index + 1)
+                } id={`bullet_${index}`} class="p-2 bg-slate-600 rounded-full hover:outline outline-slate-400">
+                </a>
+            ))}
+        </div>
+    </div>
+</section>
 
 
 <script define:vars={{page}}>
@@ -88,17 +86,40 @@ const [data] = page.data
 <style>
 .galeria_container{
     width: 100vw;
-    height: 70vh;
+    height: 100vh;
     max-width: 1536px;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     position: relative;
 }
 
+.imagem-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seta-galeria {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+}
+.seta-esquerda {
+    left: 15px;
+}
+.seta-direita {
+    right: 15px;
+}
+.fechar-galeria {
+    position: absolute;
+    top: 5px;
+    right: -40px;
+    z-index: 30;
+}
 
 .forest_img{
     max-width: 100wh; 
@@ -109,16 +130,54 @@ const [data] = page.data
 
 @media (max-width: 767px) {
     .galeria_container {
-        flex-direction: column; /* Em telas menores, as imagens ficarão em uma coluna  */
+        flex-direction: column;
         height: 100vh;
         padding-bottom: 80px;
     }
-
     .forest_img {
-        width: 100%; /* Em telas pequenas, a imagem ocupa a largura total do contêiner */
-        height: auto;   /* Altura ajustável */
+        width: 100%;
+        height: auto;
+    }
+    .seta-galeria {
+        position: fixed;
+        top: unset;
+        bottom: 15px;
+        transform: none;
+        z-index: 30;
+    }
+    .seta-esquerda {
+        left: 15px;
+        right: unset;
+    }
+    .seta-direita {
+        right: 15px;
+        left: unset;
+    }
+    .fechar-galeria {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 40;
     }
 }
 
 
 </style>
+
+
+<script is:inline>
+  function restartVideo() {
+    const video = document.getElementById('main-video');
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+      video.load();
+    }
+  }
+
+  // Para navegação client-side do Astro
+  document.addEventListener('astro:page-load', restartVideo);
+
+  // Para garantir em navegação tradicional também
+  window.addEventListener('DOMContentLoaded', restartVideo);
+</script>
